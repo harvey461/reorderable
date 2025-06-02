@@ -1,7 +1,12 @@
 // swift-tools-version: 6.0
 #if canImport(UIKit)
 import UIKit
+typealias PlatformColor = UIColor
+#elseif canImport(AppKit)
+import AppKit
+typealias PlatformColor = NSColor
 #endif
+
 import PackageDescription
 
 let package = Package(
